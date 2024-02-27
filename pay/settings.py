@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-zp#nvkr5r1+@$fwwhu7=5(8vr(6ce&l(yzm)ch2=up%i!(c!y1"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["canuckcash.com"]
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # React development server
@@ -34,7 +34,13 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:8000",  # React development server
     "http://127.0.0.1:8001",  # React development server
     # Add other origins as needed
+    "https://canuckcash.com"
 ]
+
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# SECURE_SSL_REDIRECT = False
+# SESSION_COOKIE_SECURE = False
+# CSRF_COOKIE_SECURE = False
 
 # Application definition
 
