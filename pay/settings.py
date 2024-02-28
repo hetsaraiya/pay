@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-zp#nvkr5r1+@$fwwhu7=5(8vr(6ce&l(yzm)ch2=up%i!(c!y1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["canuckcash.com", "*"]
+ALLOWED_HOSTS = ["canuckcash.com", "*", "pay-1fvl.onrender.com"]
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # React development server
@@ -36,6 +36,7 @@ CORS_ALLOWED_ORIGINS = [
     # Add other origins as needed
     "https://canuckcash.com",
     "https://pay-production-750e.up.railway.app"
+    "https://pay-1fvl.onrender.com"
 ]
 
 # SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
@@ -153,9 +154,13 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'static/css'),
     os.path.join(BASE_DIR, 'static/img'),
+    os.path.join(BASE_DIR, 'static/js'),
+    os.path.join(BASE_DIR, 'static/media'),
+    os.path.join(BASE_DIR, 'static/staticfiles'),
     # Remove 'media' directory from STATICFILES_DIRS
 ]
