@@ -36,7 +36,7 @@ def signup(request):
         # myuser.is_active = False
         myuser.is_active = True
         myuser.save()
-        messages.success(request, "Your Account has been created succesfully!! Please check mail for confirmation")
+        messages.success(request, "Your Account has been created succesfully!! Please check mail for confirmation!")
         
         
   
